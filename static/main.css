@@ -1,0 +1,17 @@
+body {
+  background: #fafafa;
+  color: #333333;
+  height: 60%;
+  width: 60%;
+  padding: 20px;
+  vertical-align: middle;
+  margin: 0 auto;
+}
+
+.form {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 25px;
+  width: 80%;
+  margin: 0 auto;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <title>Fetch Rewards Coding Assessment</title>
+</head>
+<body>
+    <h3 align="center">Fetch Rewards Coding Assessment</h3><br>
+    <div align="center">
+        <form action="/" method="POST">
+          <div class="form-group">
+            <label for="dimensions">Image dimensions. The input should be (rows, columns) for example (10, 12)</label>
+            <input type="text" class="form-control" name="dimensions" id="dimensions" placeholder="image dimensions">
+          </div>
+          <div class="form-group">
+            <label for="corner_points">Corner Points. It must be a list of four (x, y) tuples,
+                for example [(1.5, 1.5), (4.0, 1.5), (1.5, 8.0), (4.0, 8.0)]</label>
+            <textarea class="form-control" datatype="text" name="corner_points" id="corner_points" rows="3"
+                      placeholder="corner points"></textarea>
+          </div>
+          <input class="btn btn-primary btn-lg btn-block" type="submit" value="Calculate"><br>
+          <h4>Solution</h4>
+          <div class="form-group">
+            <textarea class="form-control" name="result" rows="10">{{result}}</textarea><br>
+            {%if err%}
+            <h3>Error: {{err}}</h3>
+            {%endif%}
+          </div>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+</body>
+</html>
