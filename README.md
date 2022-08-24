@@ -70,7 +70,8 @@ virtualenv venv
 Activate virtual environment
 
 ```
-source venv/bin/activate
+source venv/bin/activate  # For Unix/macOS
+.\venv\Scripts\activate  # For Windows
 ```
 
 Install the dependencies written in requirements.txt
